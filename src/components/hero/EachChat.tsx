@@ -1,17 +1,37 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { delay, motion } from "framer-motion";
 
 interface EachChatProps {
   type: "human" | "bot";
   text: string;
+  width?: string;
+  index: number;
 }
 
-function EachChat({ type, text }: EachChatProps) {
+function EachChat({ type, text, width = "", index }: EachChatProps) {
   return (
-    <div
-      className={`min-h-[60px] min-w-[100px] bg-[${
-        type == "human" ? "#FFFFFF" : "#3445D7"
-      }] rounded-[14px] p-3 relative ${type == "human" ? "text-black" : ""}`}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.8, delay: 1.5 * (index + 1) },
+        },
+      }}
+      className={`min-h-[60px] border w-fit  rounded-[14px] p-2 relative ${
+        type == "human" ? "text-black" : ""
+      }`}
+      style={{
+        backgroundColor: type == "human" ? "#FFFFFF" : "#3445D7",
+        width: width,
+        alignSelf: index % 2 == 0 ? "flex-end" : "flex-start",
+      }}
+      transition={{ duration: 0.5 }}
     >
       <span
         className={`h-[25px] w-[25px] rounded-full p absolute  ${
@@ -34,7 +54,7 @@ function EachChat({ type, text }: EachChatProps) {
       >
         {text}
       </span>
-    </div>
+    </motion.div>
   );
 }
 

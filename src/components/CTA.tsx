@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Button from "./Button";
 import Highlight from "./Cta/Highlight";
+import { motion } from "framer-motion";
 
 function CTA() {
   return (
@@ -14,25 +16,55 @@ function CTA() {
     >
       <div className="w-[700px]">
         <div className="flex-col justify-center items-center gap-[18px] inline-flex">
-          <div className="self-stretch  text-center">
+          <motion.div
+            className="self-stretch  text-center"
+            initial="hidden"
+            whileInView="visible"
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            transition={{ duration: 0.6 }}
+          >
             <span className="text-white text-5xl font-medium font-['Helvetica Neue'] capitalize leading-[57.60px]">
               Experience Fast, Accurate, Multi support{" "}
             </span>
             <span className="text-[#ebebf0] text-5xl font-medium font-['Helvetica Neue'] capitalize leading-[57.60px]">
               Ai chat bot system
             </span>
-          </div>
-          <div className="w-[582px] text-center text-[#bbb1ff] text-base font-normal font-['Helvetica Neue'] leading-snug">
+          </motion.div>
+          <motion.div
+            className="w-[582px] text-center text-[#bbb1ff] text-base font-normal font-['Helvetica Neue'] leading-snug"
+            initial="hidden"
+            whileInView="visible"
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            transition={{ duration: 0.6 }}
+          >
             Businesses struggle to make sense of vast amounts of complex data,
             missing out on valuable insights that could drive growth and
             innovation.{" "}
-          </div>
-          <Button
-            text="Get Started"
-            icon="ArrowOutward"
-            color="#E1E4FF"
-            textColor="#303EB7"
-          />
+          </motion.div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            variants={{
+              hidden: { opacity: 0, x: 100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            transition={{ duration: 0.6 }}
+          >
+            {" "}
+            <Button
+              text="Get Started"
+              icon="ArrowOutward"
+              color="#E1E4FF"
+              textColor="#303EB7"
+            />
+          </motion.div>
         </div>
       </div>
       <Highlight />

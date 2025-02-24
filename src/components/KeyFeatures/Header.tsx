@@ -3,7 +3,7 @@ import FlashOnIcon from "@mui/icons-material/FlashOn";
 
 function Header() {
   return (
-    <div className="h-[350px]  pt-8 flex justify-start items-center flex-col font-extrabold">
+    <div className="h-[350px]  pt-8 flex justify-start items-center flex-col font-bold">
       <p className="flex items-center gap-2">
         <FlashOnIcon sx={{ color: "#303EB7" }} />{" "}
         <span className="text-[#1F2977]">Key Features</span>{" "}

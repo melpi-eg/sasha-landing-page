@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 interface BenifitsCardProps {
   title: string;
@@ -7,17 +9,43 @@ interface BenifitsCardProps {
 }
 
 function BenifitsCard({ title, description, icon }: BenifitsCardProps) {
+  const itemVariants = {
+    initial: "hidden",
+    whileInView: "visible",
+    transition: { duration: 1 },
+    variants: {
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 },
+    },
+    // viewport: { once: true },
+  };
+
   return (
     <div className="">
-      <div className="flex items-start flex-col gap-4 p-[24px] w-[428px] rounded-[20px] border h-[257px] " style={{backgroundImage: "linear-gradient(to right, #FBFCFF,#FFFFFF)"}}>
+      <motion.div
+        {...itemVariants}
+        // whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+        // viewport={{ }}
+        className="flex items-start flex-col gap-4 p-[24px] w-[428px] rounded-[20px] border h-[257px] "
+        style={{
+          backgroundImage: "linear-gradient(to right, #FBFCFF,#FFFFFF)",
+        }}
+      >
         <span className="bg-[#EEF0FF] rounded-full p-2 text-[#303EB7]">
           {icon}
         </span>
         <div>
-          <h1 className="font-extrabold text-[22px] mt-[40px]">{title}</h1>
-          <p className="text-[#9A9A9A] mt-[10px]">{description}</p>
+          <motion.h1
+            className="font-bold text-[22px] mt-[40px]"
+            {...itemVariants}
+          >
+            {title}
+          </motion.h1>
+          <motion.p className="text-[#9A9A9A] mt-[10px]" {...itemVariants}>
+            {description}
+          </motion.p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <div className="h-[300px]  pt-8 flex justify-start items-center flex-col font-extrabold">
+    <div className="h-[300px]  pt-8 flex justify-start items-center flex-col font-bold">
       <p className="flex items-center gap-2">
         <span className="text-[#1F2977]">Benifits</span>{" "}
       </p>

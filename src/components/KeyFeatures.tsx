@@ -1,9 +1,13 @@
+"use client";
 import React from "react";
 import Header from "./KeyFeatures/Header";
 import KeyFeatureCard from "./KeyFeatures/Card";
 import { title } from "process";
 import Image from "next/image";
 import EachChat from "./hero/EachChat";
+import { motion } from "framer-motion";
+import Card3 from "./KeyFeatures/Card3";
+import Card4 from "./KeyFeatures/Card4";
 
 const cards: {
   title: string;
@@ -14,6 +18,21 @@ const cards: {
     title: "AI Chat Bot",
     description:
       "Uses advanced NLP and machine learning to understand and respond to user queries effectively.",
+    JSX: (
+      <>
+        {" "}
+        <div className="h-[436px] w-[350px] flex flex-col gap-3 p-2">
+          <EachChat type="human" text="Hi Allena " width="80px" index={0} />
+          <EachChat type="bot" text="Help your customers " index={1} />
+          <EachChat
+            type="human"
+            text="Help your customers get instant  with AI-generated responses"
+            index={2}
+          />
+          {/* <Image src="/landing/bento0.svg" alt="" width={270} height={228}></Image> */}
+        </div>
+      </>
+    ),
   },
   {
     title: "Multi-Mode Assistance",
@@ -24,11 +43,13 @@ const cards: {
     title: "Multi lingual support",
     description:
       "Automatically routes complex issues to the appropriate human support team with full context.",
+    JSX: <Card3 />,
   },
   {
     title: "Escalation to human support when needed",
     description:
       "Automatically routes complex issues to the appropriate human support team with full context.",
+    JSX: <Card4 />,
   },
   {
     title: "Ticket management system",

@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import WidgetsIcon from "@mui/icons-material/Widgets";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import MessageIcon from "@mui/icons-material/Message";
 import LocalPlayIcon from "@mui/icons-material/LocalPlay";
+import { motion } from "framer-motion";
 
 const tabs: {
   text: string;
@@ -47,8 +49,16 @@ function TabsHeader({
     >
       {/* TabsHeader */}
       {tabs.map((item, index) => (
-        <div
+        <motion.div
           key={index}
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
           className={`h-[74px] flex items-center justify-center gap-2 ${
             activeTab == index ? " border-b-white rounded-[5px]" : ""
           } cursor-pointer relative`}
@@ -59,7 +69,7 @@ function TabsHeader({
           {index == activeTab && (
             <div className="w-full h-[10px] bg-white absolute bottom-0 rounded-t-[10px]"></div>
           )}
-        </div>
+        </motion.div>
       ))}
     </div>
   );

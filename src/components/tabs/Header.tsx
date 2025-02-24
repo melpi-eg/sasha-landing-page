@@ -3,7 +3,7 @@ import ContactEmergencyIcon from '@mui/icons-material/ContactEmergency';
 
 function Header() {
   return (
-    <div className="h-[250px]  pt-8 flex justify-start items-center flex-col font-extrabold">
+    <div className="h-[250px]  pt-8 flex justify-start items-center flex-col font-bold">
       <p className="flex items-center gap-2">
         <ContactEmergencyIcon sx={{ color: "#303EB7" }} />{" "}
         <span className="text-[#1F2977]">Admin Panel</span>{" "}
