@@ -30,7 +30,7 @@ const FAQs: { question: string; answer: string }[] = [
 
 function Faq() {
   return (
-    <div className="h-[500px] flex gap-[20px] mt-[40px] w-[1324px] mx-auto">
+    <div className="h-[500px] flex gap-[20px] mt-[40px] w-[1324px] max-[1300px]:w-[1200px] max-[1200px]:w-[1100px] mx-auto">
       <motion.div
         className="h-[500px] w-[300px] p-3"
         initial="hidden"

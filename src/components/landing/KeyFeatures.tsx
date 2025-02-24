@@ -8,6 +8,7 @@ import EachChat from "./hero/EachChat";
 import { motion } from "framer-motion";
 import Card3 from "./KeyFeatures/Card3";
 import Card4 from "./KeyFeatures/Card4";
+import Card5 from "./KeyFeatures/Card5";
 
 const cards: {
   title: string;
@@ -55,6 +56,7 @@ const cards: {
     title: "Ticket management system",
     description:
       "Businesses struggle to make sense of vast amounts of complex data, missing out on valuable insights that could drive growth and innovation.",
+    JSX: <Card5 />,
   },
 ];
 

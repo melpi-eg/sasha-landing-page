@@ -98,7 +98,7 @@ function Hero() {
           src={"/landing/hero-women.png"}
           width={511}
           height={496}
-          style={{ height: "496px", width: "620px", objectFit: "cover" }}
+          style={{ height: "496px", width: "620px", objectFit: "contain" }}
           alt="Hero Image"
         />
         {/* <motion.div variants={itemVariants}> */}

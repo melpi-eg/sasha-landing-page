@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function CTA() {
   return (
     <div
-      className="mx-auto  h-[545px] mt-[150px] w-[1324px] rounded-[20px] flex items-center pt-[40px] flex-col relative "
+      className="mx-auto  h-[545px] mt-[150px] w-[1324px] max-[1300px]:w-[1200px] max-[1200px]:w-[1100px] rounded-[20px] flex items-center pt-[40px] flex-col relative "
       style={{
         // background:
         //   "radial-gradient(19deg, #6159C0, #30387D, #415EB5, #1E2564, #232E89)",

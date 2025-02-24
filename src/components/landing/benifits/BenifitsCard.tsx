@@ -26,7 +26,7 @@ function BenifitsCard({ title, description, icon }: BenifitsCardProps) {
         {...itemVariants}
         // whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
         // viewport={{ }}
-        className="flex items-start flex-col gap-4 p-[24px] w-[428px] rounded-[20px] border h-[257px] "
+        className="flex items-start flex-col gap-4 p-[24px] w-[428px] h-[257px] max-[1300px]:w-[400px] max-[1300px]:h-[300px] max-[1200px]:w-[320px] max-[1200px]:h-[350px] rounded-[20px] border  "
         style={{
           backgroundImage: "linear-gradient(to right, #FBFCFF,#FFFFFF)",
         }}

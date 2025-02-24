@@ -31,7 +31,7 @@ const benifits: {
 
 function BenifitsSection() {
   return (
-    <div className="flex justify-center gap-[15px]">
+    <div className="flex justify-center gap-[15px] ">
       {benifits.map((item, index) => (
         <BenifitsCard
           key={index}
