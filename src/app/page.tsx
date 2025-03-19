@@ -12,7 +12,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="bg-white">
       <Banner />
       <Navbar />
       <Hero />
@@ -21,7 +21,7 @@ export default function Home() {
       <Benfits />
       <CTA />
       <Faq />
-      <div className="h-[200px]"></div>
+      {/* <div className="h-[200px]"></div> */}
       <Footer />
     </div>
   );

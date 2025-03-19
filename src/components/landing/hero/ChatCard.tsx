@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function ChatCard() {
   return (
-    <div className="h-[228px] w-[350px]  absolute bottom-[170px] left-[-130px] flex flex-col gap-3 p-2">
+    <div className="h-[228px] w-[350px] max-[1300px]:w-[300px]  absolute bottom-[170px] left-[-130px] flex flex-col gap-3 p-2">
       <EachChat type="human" text="Hi Allena " width="80px" index={0} />
       <EachChat type="bot" text="Help your customers " index={1} />
       <EachChat
